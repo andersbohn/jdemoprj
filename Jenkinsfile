@@ -1,4 +1,4 @@
-@Library('https://github.com/andersbohn/jsharedlib@master')
+@Library('jsharedlib@master') _
 
 node('master') {  
   stage('Build') {
