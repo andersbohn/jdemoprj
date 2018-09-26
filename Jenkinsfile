@@ -5,6 +5,12 @@ node('master') {
 	print "jenkinsfile"
   }
   stage('Test') {
-	print "jf " + g1()
+	print "g1: " 
+	var x = g1 { 
+       print " jf inside "
+       return "hullo"
+	}
+	print "g1! " 
+	echo "g1 x ${x}"
   }
 }
