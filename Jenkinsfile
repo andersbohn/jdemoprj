@@ -6,7 +6,7 @@ node('master') {
   }
   stage('Test') {
 	print "g1: " 
-	var x = g1 { 
+	def x = g1 { 
        print " jf inside "
        return "hullo"
 	}
