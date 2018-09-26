@@ -1,4 +1,4 @@
 @Library('jsharedlib@master') _
 stdSbt {
-	autoVersionRelease: false 
+	autoVersionRelease = false 
 }
