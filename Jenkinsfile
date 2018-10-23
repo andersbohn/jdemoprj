@@ -1,7 +1,7 @@
 @Library('jsharedlib@master') _
 node {
     echo "mkdir"
-	sh 'mkdir target/releaselink'
+	sh 'mkdir -p target/releaselink'
 	echo "write file"
 	sh 'echo "<html><body>testing html</body></html>" > target/releaselink/index.html'
 	echo "publish Html "
