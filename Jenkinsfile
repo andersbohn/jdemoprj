@@ -1,7 +1,10 @@
 @Library('jsharedlib@master') _
 node {
+    echo "mkdir"
 	sh 'mkdir target/releaselink'
+	echo "write file"
 	sh 'echo "<html><body>testing html</body></html>" > target/releaselink/index.html'
+	echo "publish Html "
 	publishHTML target: [
 	                        allowMissing:true,
 	                        alwaysLinkToLastBuild: false,
