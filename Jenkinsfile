@@ -1,5 +1,15 @@
 @Library('jsharedlib@master') _
-manager.createSummary("document.png").appendText("<a href='"+ pom.url + "'>View Maven Site</a>", false)
+
+sh 'mkdir target/releaselink'
+sh 'echo "<html><body>testing html</body></html>" > target/releaselink/index.html'
+publishHTML target: [
+                        allowMissing:true,
+                        alwaysLinkToLastBuild: false,
+                        keepAll:true,
+                        reportDir: 'target/releaselink',
+                        reportFiles: 'index.html',
+                        reportName: 'ReleaseLink'
+                    ]
 stdSbt {
 	autoVersionRelease = false 
 }
