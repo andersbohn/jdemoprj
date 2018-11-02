@@ -2,4 +2,4 @@
 stdSbt {
 	autoVersionRelease = false 
 }
-sh 'python3 --version'
+
