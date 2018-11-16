@@ -1,15 +1,12 @@
-#!groovy
-
-node {
-    stage 'Checkout'
-    scmResult = checkout scm
-    echo "scm " + scmResult
-
-    stage 'Python test docker'
-    agent { docker 'openjdk:8-jre' } 
+pipeline {
+    agent {
+        docker { image 'node:7-alpine' }
+    }
+    stages {
+        stage('Test') {
             steps {
-                echo 'Hello, JDK'
-                sh 'java -version'
+                sh 'node --version'
             }
+        }
+    }
 }
-
