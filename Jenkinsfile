@@ -8,6 +8,7 @@ pipeline {
                 sh 'env'
                 sh 'ls -l /var'
                 sh 'python --version'
+                sh 'python3 -m unittest tests/*'
             }
         }
     }
