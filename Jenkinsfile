@@ -1,11 +1,13 @@
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'airflow-tools:latest' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'nxode --version'
+                sh 'env'
+                sh 'ls -l /var'
+                sh 'python --version'
             }
         }
     }
